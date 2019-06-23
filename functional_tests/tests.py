@@ -112,7 +112,7 @@ class NewVisitorTest(LiveServerTestCase):
 
         # 这个清单还是没有伊迪丝的清单
         page_text = self.browser.find_element_by_tag_name('body').text
-        self.assertNoIn('Buy peacock feathers', page_text)
+        self.assertNotIn('Buy peacock feathers', page_text)
         self.assertIn('Buy milk', page_text)
 
         # 两人都很满意，然后去睡觉了:w
